@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F4EFE6" />
+  <title>اندام‌های حیاتی | Vital Organs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-fa" data-i18n="brand">اندام‌های حیاتی</span>
+      <span class="brand-en">Vital Organs</span>
+    </div>
+    <button type="button" class="lang-toggle" id="langToggle" aria-label="Language">
+      <span class="lang-pill is-active" data-lang="fa">فا</span>
+      <span class="lang-pill" data-lang="en">EN</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">
+        <span class="hero-fa" data-i18n="title">اندام‌های حیاتی بدن</span>
+        <span class="hero-en">Vital Organs of the Body</span>
+      </h1>
+      <p class="hero-hook" data-i18n="hook">هشت اندام کلیدی بدن به همراه بیماری های آنها را بشناسید</p>
+      <div class="progress-card">
+        <div class="progress-head">
+          <span data-i18n="progressLabel">پیشرفت کاوش</span>
+          <strong id="progressText">۰ / ۸</strong>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-labelledby="galleryTitle">
+      <div class="section-head">
+        <h2 id="galleryTitle" data-i18n="galleryTitle">گالری اندام‌ها</h2>
+        <p data-i18n="galleryHint">روی هر کارت بزنید تا جزئیات باز شود</p>
+      </div>
+      <div class="organ-grid" id="organGrid"></div>
+    </section>
+
+    <section class="quiz" id="quiz" aria-labelledby="quizTitle">
+      <div class="section-head">
+        <h2 id="quizTitle" data-i18n="quizTitle">آزمون</h2>
+        <p data-i18n="quizHint">۱۸ پرسش دانشگاهی · آناتومی، فیزیولوژی و پاتولوژی</p>
+      </div>
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span id="quizStep">۱ / ۱۸</span>
+          <span id="quizScore" hidden></span>
+        </div>
+        <p class="quiz-q" id="quizQuestion"></p>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-explain" id="quizExplain" hidden></div>
+        <div class="quiz-nav">
+          <button type="button" class="btn ghost" id="quizPrev" data-i18n="prev">قبلی</button>
+          <button type="button" class="btn primary" id="quizNext" data-i18n="next">بعدی</button>
+        </div>
+        <div class="quiz-result" id="quizResult" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Developed by Parsa Khosravani</p>
+  </footer>
+
+  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+  <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <button type="button" class="sheet-close" id="sheetClose" aria-label="Close">×</button>
+    <div class="sheet-art" id="sheetArt"></div>
+    <h2 class="sheet-title" id="sheetTitle"></h2>
+    <p class="sheet-sub" id="sheetSub"></p>
+    <div class="sheet-block">
+      <h3 data-i18n="fnLabel">کارکرد و فیزیولوژی</h3>
+      <p id="sheetFn"></p>
+    </div>
+    <div class="sheet-block fact">
+      <h3 data-i18n="factLabel">نکات آناتومی و فیزیولوژی</h3>
+      <ul class="fact-list" id="sheetFacts"></ul>
+    </div>
+    <div class="sheet-block">
+      <h3 data-i18n="diseaseLabel">بیماری‌ها (شایع و نادر)</h3>
+      <ul class="disease-list" id="sheetDiseases"></ul>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
