@@ -1,36 +1,26 @@
-# Vital Organs / اندام‌های حیاتی
+# بیماری‌های داخلی | راهنمای تصویری بیماری‌ها
 
-Interactive bilingual (Persian + English) educational site about eight vital organs: anatomy, physiology, common and rare diseases, plus an 18-question university-level quiz.
+یک وب‌سایت ایستای فارسی و راست‌چین برای مرور بیماری‌های منتخب هشت گروه: مغز، چشم، قلب، ریه، کبد، معده، لوزالمعده و کلیه. برای هر بیماری، سازوکار، الگوی بالینی، ارزیابی تشخیصی و اصول درمان آمده و پیوند منبع علمی در همان کارت قرار دارد.
 
-Built as static files for GitHub Pages (no build step).
+طراحی و پیاده‌سازی: پارسا خسروانی
 
-## Files
+## فایل‌ها
 
-- `index.html` — structure
-- `images/` — anatomical organ illustrations
-- `styles.css` — cream journal UI (mobile-first)
-- `app.js` — organ data, anatomical images, quiz, language toggle
+- index.html — ساختار تک‌صفحه، عنوان‌ها، پیمایش و آزمون
+- styles.css — سیستم طراحی واکنش‌گرا و راست‌چین
+- app.js — داده‌های بیماری‌ها، کارت‌ها، پیشرفت مطالعه و منطق آزمون ۱۸ پرسشی
+- images/ — تصویرهای فصل‌ها
 
-## Features
+## اجرای محلی
 
-- Individual clickable organ cards (no body silhouette)
-- FA primary + EN toggle
-- Detail sheets with function, anatomy notes, disease explanations, and Rare tags
-- Scored quiz with post-answer explanations
-- Footer: Developed by Parsa Khosravani
+فایل index.html را باز کنید یا یک وب‌سرور ایستا اجرا کنید:
 
-## Run locally
-
-Open `index.html` in a browser, or:
-
-```bash
-npx --yes serve .
-```
+    npx --yes serve .
 
 ## GitHub Pages
 
-Publish the repo root (or `/docs`) as Pages. Paths are relative — no bundler required.
+مخزن را به‌عنوان ریشه انتشار انتخاب کنید. مسیرهای فایل و تصویر نسبی‌اند؛ بنابراین صفحه زیر مسیر مخزن هم بارگذاری می‌شود و به فرایند build نیاز ندارد.
 
-## Credit
+## یادداشت آموزشی
 
-Developed by Parsa Khosravani
+محتوا برای آموزش عمومی است و جایگزین ارزیابی، تشخیص یا درمان پزشکی نیست. منابع علمی هر کارت به وب‌سایت‌های رسمی پیوند داده شده‌اند.
