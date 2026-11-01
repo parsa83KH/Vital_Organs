@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#101d2b" />
+  <meta name="theme-color" content="#f5f3eb" />
   <meta name="description" content="مروری تصویری و تخصصی بر بیماری‌های منتخب مغز، چشم، قلب، ریه، کبد، معده، لوزالمعده و کلیه." />
   <title>بیماری‌های داخلی | از نشانه تا تشخیص</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,7 @@
   <a class="skip-link" href="#content">رفتن به محتوای اصلی</a>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="بیماری‌های داخلی، ابتدای صفحه"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>بیماری‌های داخلی</span></a>
-    <a class="topbar-quiz" href="#quiz">رفتن به مرور دانسته‌ها <span aria-hidden="true">←</span></a>
+    <a class="topbar-quiz" href="#quiz" aria-label="رفتن به آزمون">آزمون <span aria-hidden="true">←</span></a>
   </header>
   <main id="content">
     <section class="hero" id="top" aria-labelledby="heroTitle">
@@ -24,22 +24,25 @@
         <h1 id="heroTitle">از نشانه<br /><span>تا تشخیص.</span></h1>
         <p class="hero-intro">در هشت فصل، با الگوی بالینی، روش‌های بررسی و اصول درمان بیماری‌های منتخب آشنا شو؛ با تمرکز بر چیزی که در تصمیم‌گیری پزشکی اهمیت دارد.</p>
         <a class="hero-cta" href="#organs">شروع مرور بیماری‌ها <span aria-hidden="true">↓</span></a>
-        <div class="hero-numbers" aria-label="درباره محتوای صفحه"><div><strong>۰۸</strong><span>فصل بیماری</span></div><div><strong>۳۲</strong><span>موضوع بالینی</span></div><div><strong>۱۸</strong><span>پرسش مرور</span></div></div>
       </div>
-      <div class="hero-art" aria-label="مسیر مرور یک بیماری از نشانه تا پیگیری" role="img">
-        <span class="art-orbit orbit-one" aria-hidden="true"></span><span class="art-orbit orbit-two" aria-hidden="true"></span>
-        <div class="diagnostic-route">
-          <div class="route-node"><span class="route-number">۰۱</span><span class="route-label">نشانه‌های شاخص</span><i aria-hidden="true">⌁</i></div><div class="route-connector" aria-hidden="true"></div>
-          <div class="route-node"><span class="route-number">۰۲</span><span class="route-label">ارزیابی بالینی</span><i aria-hidden="true">＋</i></div><div class="route-connector" aria-hidden="true"></div>
-          <div class="route-node route-node-accent"><span class="route-number">۰۳</span><span class="route-label">تشخیص و افتراق</span><i aria-hidden="true">◉</i></div><div class="route-connector" aria-hidden="true"></div>
-          <div class="route-node"><span class="route-number">۰۴</span><span class="route-label">درمان و پیگیری</span><i aria-hidden="true">↗</i></div>
-        </div>
-        <div class="art-caption"><span class="pulse-line" aria-hidden="true"></span> چارچوبی برای خواندن اطلاعات بالینی</div>
+      <div class="hero-art">
+        <article class="case-sheet" aria-labelledby="caseSheetTitle">
+          <div class="sheet-topline"><span class="sheet-symbol" aria-hidden="true">✚</span><span id="caseSheetTitle">برگهٔ بررسی بالینی</span><span class="sheet-sample">نمونهٔ آموزشی</span></div>
+          <div class="sheet-patient-line"><span>پروندهٔ فرضی</span><span>شمارهٔ مرور: ۰۱</span></div>
+          <div class="sheet-row"><span>شکایت اصلی</span><strong>فشار قفسهٔ سینه</strong></div>
+          <div class="sheet-row"><span>بررسی‌ها</span><strong>نوار قلب + تروپونین سریالی</strong></div>
+          <div class="sheet-lab"><div><span class="sheet-lab-label">الگوی نمونه</span><strong>تغییرات نیازمند بررسی فوری</strong></div>
+            <svg viewBox="0 0 230 48" role="img" aria-label="خط نمونهٔ نوار قلب، صرفاً تصویرسازی">
+              <path d="M2 27h37l9-2 8 2h25l8-5 7 15 9-31 9 24 8-5h24l9-2 8 2h37" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 41h226" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 5" opacity=".35"/>
+            </svg>
+          </div>
+          <div class="sheet-diagnosis"><span>تشخیص محتمل</span><strong>سندرم حاد کرونری</strong><small>بر پایهٔ ارزیابی بالینی و بررسی‌های سریالی</small></div>
+          <div class="sheet-foot"><span>ارزیابی فوری</span><span class="sheet-stamp">مرور تشخیصی</span></div>
+        </article>
       </div>
-      <div class="hero-scroll" aria-hidden="true"><span></span> برای ادامه پایین برو</div>
     </section>
-    <aside class="urgent-note" aria-label="هشدار علائم اورژانسی"><span class="urgent-symbol" aria-hidden="true">!</span><p><strong>نشانه‌های ناگهانی را جدی بگیر:</strong> ضعف یک‌طرفه یا اختلال گفتار، فشار شدید قفسه سینه، تنگی نفس ناگهانی یا کاهش ناگهانی بینایی نیازمند ارزیابی اورژانسی است.</p></aside>
-    <section class="guide" id="organs" aria-labelledby="guideTitle">
+<section class="guide" id="organs" aria-labelledby="guideTitle">
       <div class="guide-heading"><p class="eyebrow">فهرست فصل‌ها</p><h2 id="guideTitle">کدام گروه بیماری؟</h2><p>یک فصل را انتخاب کن یا پیوسته پایین برو؛ هر کارت از سازوکار تا ارزیابی و درمان را مرور می‌کند.</p></div>
       <nav class="section-nav" aria-label="پیمایش فصل‌های بیماری"><a href="#organ-brain">مغز</a><a href="#organ-eyes">چشم</a><a href="#organ-heart">قلب</a><a href="#organ-lungs">ریه</a><a href="#organ-liver">کبد</a><a href="#organ-stomach">معده</a><a href="#organ-pancreas">لوزالمعده</a><a href="#organ-kidneys">کلیه</a></nav>
       <div class="progress-card" aria-label="پیشرفت مطالعه فصل‌ها"><div class="progress-head"><span>فصل‌هایی که مرور کردی</span><strong id="progressText">۰ از ۸</strong></div><div class="progress-track" id="progressBar" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" aria-label="پیشرفت مطالعه فصل‌ها"><div class="progress-fill" id="progressFill"></div></div></div>
@@ -50,7 +53,7 @@
       <div class="quiz-card"><div class="quiz-meta"><span class="quiz-kicker">پرسش</span><span id="quizStep">۱ / ۱۸</span></div><div class="quiz-progress-track" aria-hidden="true"><div class="quiz-progress-fill" id="quizProgressFill"></div></div><p class="quiz-q" id="quizQuestion" tabindex="-1"></p><div class="quiz-options" id="quizOptions" role="group" aria-label="گزینه‌های پاسخ"></div><div class="quiz-explain" id="quizExplain" aria-live="polite" hidden></div><div class="quiz-nav"><button type="button" class="btn ghost" id="quizPrev">قبلی</button><button type="button" class="btn primary" id="quizNext">بعدی</button></div><div class="quiz-result" id="quizResult" aria-live="polite" hidden></div></div>
     </section>
   </main>
-  <footer class="site-footer"><a class="footer-brand" href="#top">بیماری‌های داخلی</a><p>محتوای آموزشی، نه جایگزین ارزیابی پزشکی · طراحی و اجرا: پارسا خسروانی</p><a class="back-top" href="#top">بازگشت به بالا ↑</a></footer>
+  <footer class="site-footer"><p>طراح و توسعه‌دهنده <strong>پارسا خسروانی</strong></p><a class="back-top" href="#top">بازگشت به بالا ↑</a></footer>
   <script src="app.js"></script>
 </body>
 </html>

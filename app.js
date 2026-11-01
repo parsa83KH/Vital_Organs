@@ -61,13 +61,25 @@ function renderDisease(disease, index) {
     '<dl class="disease-details">' + details + '</dl>' +
     '<a class="source-link" href="' + disease.url + '" target="_blank" rel="noopener noreferrer">منبع علمی: ' + disease.source + '<span aria-hidden="true">↗</span></a></article>';
 }
+function renderChapterChart(id) {
+  const charts = {
+    brain: '<figure class="clinical-chart"><figcaption><strong>مسیر افتراق اولیهٔ سکته</strong><span>نمودار مفهومی</span></figcaption><div class="flow-sequence" role="group" aria-label="مراحل ارزیابی اولیهٔ سکته"><div class="flow-node">نقص عصبی با شروع ناگهانی</div><span class="flow-arrow" aria-hidden="true">←</span><div class="flow-node">تصویربرداری فوری مغز</div><span class="flow-arrow" aria-hidden="true">←</span><div class="flow-branches"><div class="flow-branch"><b>بدون خون‌ریزی</b><span>بررسی سکتهٔ ایسکمیک و انسداد رگ</span></div><div class="flow-branch is-warm"><b>وجود خون‌ریزی</b><span>انتخاب مسیر درمانی متفاوت</span></div></div><span class="flow-arrow" aria-hidden="true">←</span><div class="flow-node">درمان پس از تعیین نوع سکته</div></div><p class="chart-note">پیش از انتخاب بعضی درمان‌ها باید خون‌ریزی مغزی رد شود.</p></figure>',
+    heart: '<figure class="clinical-chart"><figcaption><strong>بررسی سندرم حاد کرونری</strong><span>نشانه‌ها و آزمایش‌ها کنار هم تفسیر می‌شوند</span></figcaption><div class="flow-sequence" role="group" aria-label="مسیر بررسی سندرم حاد کرونری"><div class="flow-node">علائم سازگار و ارزیابی فوری</div><span class="flow-arrow" aria-hidden="true">←</span><div class="flow-node">نوار قلب + تروپونین سریالی</div><span class="flow-arrow" aria-hidden="true">←</span><div class="flow-node">تفسیر مجموعهٔ شواهد و تعیین مسیر درمان</div></div><p class="chart-note">یک نتیجهٔ آزمایش یا نوار قلب به‌تنهایی برای همهٔ سناریوها کافی نیست.</p></figure>',
+    liver: '<figure class="clinical-chart"><figcaption><strong>از علت زمینه‌ای تا ارزیابی آسیب کبد</strong><span>روند بیماری در افراد یکسان نیست</span></figcaption><div class="flow-sequence" role="group" aria-label="مسیر کلی ارزیابی بیماری کبد"><div class="flow-node flow-source-group"><span>هپاتیت مزمن</span><span>اختلال متابولیک</span><span>علل ارثی یا دیگر</span></div><span class="flow-arrow" aria-hidden="true">←</span><div class="flow-node">بررسی علت، عملکرد و میزان فیبروز</div><span class="flow-arrow" aria-hidden="true">←</span><div class="flow-node">در صورت پیشرفت: سیروز و ارزیابی عوارض</div></div><p class="chart-note">همهٔ بیماری‌های کبدی به سیروز پیشرفت نمی‌کنند؛ مرحله و علت، پیگیری را تعیین می‌کنند.</p></figure>',
+    pancreas: '<figure class="clinical-chart"><figcaption><strong>دو سازوکار مهم در دیابت</strong><span>مقایسهٔ مفهومی</span></figcaption><div class="diabetes-compare"><div><span class="compare-label">نوع ۱</span><strong>تخریب خودایمنی سلول بتا</strong><p>کمبود شدید انسولین؛ انسولین برای درمان ضروری است.</p></div><div><span class="compare-label">نوع ۲</span><strong>مقاومت به انسولین</strong><p>همراه با افت تدریجی ترشح انسولین؛ درمان بر اساس وضعیت هر فرد انتخاب می‌شود.</p></div></div></figure>',
+    kidneys: '<figure class="clinical-chart"><figcaption><strong>ارزیابی بیماری مزمن کلیه</strong><span>دو نشانگر را در کنار هم ببین</span></figcaption><div class="kidney-markers"><div><span class="marker-icon" aria-hidden="true">خون</span><strong>eGFR</strong><p>برآورد عملکرد تصفیهٔ کلیه</p></div><span class="marker-plus" aria-hidden="true">+</span><div><span class="marker-icon" aria-hidden="true">ادرار</span><strong>UACR</strong><p>نسبت آلبومین به کراتینین؛ نشانگر آسیب کلیه</p></div><span class="marker-arrow" aria-hidden="true">←</span><div class="marker-result"><strong>تفسیر خطر</strong><p>در کنار علت و تداوم یافته‌ها؛ تشخیص مزمن نیازمند دست‌کم ۳ ماه است.</p></div></div></figure>'
+  };
+  return charts[id] || "";
+}
 function renderOrgan(organ, index) {
   const diseases = organ.diseases.map(renderDisease).join("");
+  const chart = renderChapterChart(organ.id);
   return '<section class="organ-section' + (index % 2 ? ' is-reversed' : '') + '" id="organ-' + organ.id + '" aria-labelledby="title-' + organ.id + '">' +
     '<header class="chapter-head"><div class="chapter-title-block"><p class="chapter-kicker"><span>' + toFa(index + 1) + '</span> فصل بیماری‌های منتخب</p>' +
     '<h2 id="title-' + organ.id + '">' + organ.fa + '</h2><p class="chapter-intro">' + organ.intro + '</p>' +
     '<div class="chapter-tags"><span>سازوکار</span><span>نشانه‌ها</span><span>تشخیص و درمان</span></div></div>' +
     '<figure class="organ-plate"><span class="plate-ring" aria-hidden="true"></span><img src="' + organ.image + '" alt="تصویر آموزشی فصل بیماری‌های ' + organ.fa + '" width="256" height="256" loading="lazy" decoding="async" /><figcaption>چهار الگوی بیماری</figcaption></figure></header>' +
+    chart +
     '<div class="disease-grid" aria-label="بیماری‌های منتخب ' + organ.fa + '">' + diseases + '</div></section>';
 }
 document.getElementById("organSections").innerHTML = ORGANS.map(renderOrgan).join("");
